@@ -1,0 +1,375 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Enhancement Three | Databases</title>
+
+  <style>
+    :root {
+      --bg: #101512;
+      --panel: #151d18;
+      --panel-light: #1b261f;
+      --border: #334436;
+      --text: #f4f1e8;
+      --muted: #cfc8b8;
+      --gold: #d8b86a;
+      --green: #8fae8b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #17231b, #101512);
+      padding: 3rem 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h1 {
+      color: var(--gold);
+      margin: 0 0 0.75rem;
+      font-size: clamp(2rem, 5vw, 3.1rem);
+      line-height: 1.2;
+    }
+
+    h2,
+    h3 {
+      color: var(--gold);
+    }
+
+    h2 {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+      margin-top: 2rem;
+    }
+
+    a {
+      color: var(--gold);
+    }
+
+    main {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem;
+    }
+
+    article {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem;
+    }
+
+    .summary-card {
+      background: var(--panel-light);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .button-link {
+      color: #101512;
+      background: var(--gold);
+      padding: 0.6rem 0.9rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .button-link:hover {
+      background: #f0cf7a;
+    }
+
+    .tag {
+      display: inline-block;
+      color: var(--bg);
+      background: var(--green);
+      padding: 0.2rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-right: 0.35rem;
+      margin-bottom: 0.35rem;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      background: #101512;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      color: var(--text);
+      overflow-x: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Enhancement Three</h1>
+    <p>Databases</p>
+
+    <div class="button-row" style="justify-content: center;">
+      <a class="button-link" href="index.html">Back to Portfolio Home</a>
+      <a class="button-link" href="narratives/Enhancement-Three.docx">Download Word Version</a>
+      <a class="button-link" href="supporting/backend-v2.zip">Download Backend V2 and Database Support</a>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <section class="summary-card">
+        <h2>Overview</h2>
+        <p>
+          Enhancement Three focuses on the database category of the capstone. For this
+          enhancement, I expanded the Project Builder by creating a database-backed
+          structure that stores service and pricing data used by the builder.
+        </p>
+
+        <p>
+          The original version relied on frontend content and static service information.
+          The enhanced version connects Project Builder pricing and service data to a
+          backend database system so that important business information can be stored,
+          retrieved, and maintained outside of the frontend page code.
+        </p>
+
+        <p>
+          <span class="tag">MongoDB</span>
+          <span class="tag">Backend API</span>
+          <span class="tag">Service Data</span>
+          <span class="tag">Environment Configuration</span>
+          <span class="tag">Privacy</span>
+        </p>
+      </section>
+
+      <section>
+        <h2>Justification and Improvement</h2>
+        <p>
+          The database-backed Project Builder improves the artifact by making service
+          information easier to maintain. If Lucid Grove Studio changes its packages,
+          adjusts maintenance options, adds new service categories, or updates local
+          visibility support, the data can be updated in the backend instead of requiring
+          large frontend code changes.
+        </p>
+
+        <p>
+          This supports better scalability because the website can grow without forcing
+          every content or pricing update to be handled directly inside the page layout.
+          The database is used for a specific purpose within the application: storing
+          business-side Project Builder data while avoiding unnecessary storage of
+          sensitive customer inquiry information.
+        </p>
+
+        <p>
+          A key improvement was separation of concerns. The database stores the pricing
+          and service content, the backend API retrieves and serves that content, and the
+          frontend Project Builder presents it to the user. This makes the application
+          easier to test, maintain, and expand.
+        </p>
+      </section>
+
+      <section>
+        <h2>Technical Implementation Details</h2>
+        <p>
+          The database enhancement uses backend-supported service and pricing data for
+          the Project Builder. The purpose of the database is to store non-sensitive
+          business information such as website packages, service bundles, maintenance
+          options, local visibility support, pricing ranges, descriptions, and category
+          information.
+        </p>
+
+        <p>
+          A simplified schema for the service data can be described as:
+        </p>
+
+        <pre>
+serviceItem = {
+  id: unique identifier,
+  name: service or package name,
+  category: website, maintenance, local visibility, add-on, or support,
+  description: short explanation shown to the user,
+  features: list of included features,
+  priceRange: low and high estimated range,
+  recommendedFor: list of user needs or project types,
+  weight: value used by the builder recommendation logic,
+  active: true or false
+}
+        </pre>
+
+        <p>
+          This structure allows the Project Builder to retrieve service data from the
+          backend instead of relying only on hardcoded frontend content. The frontend does
+          not need to know how the data is stored internally. It only needs to request
+          pricing and service information from the API endpoint and render the returned
+          data in the builder interface.
+        </p>
+
+        <p>
+          A simplified retrieval flow is:
+        </p>
+
+        <pre>
+Frontend loads Project Builder
+Frontend sends request to backend pricing endpoint
+Backend connects to the database using environment configuration
+Backend retrieves active service and pricing records
+Backend returns structured JSON data to the frontend
+Frontend validates the returned data
+Frontend displays packages, bundles, and recommendations to the user
+        </pre>
+
+        <p>
+          A simplified update flow is:
+        </p>
+
+        <pre>
+Service or pricing information changes
+Backend database record is updated
+API returns the updated service data on the next request
+Frontend displays the new information without requiring major page-code changes
+        </pre>
+
+        <p>
+          This design improves maintainability because service updates can be handled
+          through the backend data source instead of editing repeated frontend content.
+          It also improves scalability because new service categories or pricing options
+          can be added as records rather than rebuilding the entire Project Builder
+          structure.
+        </p>
+      </section>
+
+      <section>
+        <h2>Course Outcomes</h2>
+
+        <h3>Outcome 1: Collaborative Environments and Decision Making</h3>
+        <p>
+          This outcome is supported because the database-backed Project Builder helps
+          potential clients make better decisions about website services, support options,
+          and local visibility needs. By storing service and pricing information in a
+          structured backend system, the builder can present clearer and more consistent
+          guidance to nontechnical users.
+        </p>
+
+        <h3>Outcome 2: Professional Communication</h3>
+        <p>
+          This outcome is supported through the way the database-backed structure helps
+          communicate service information more clearly. Instead of scattering pricing and
+          package content across frontend code, the data can be organized consistently
+          and presented through the Project Builder in a way that is easier for users to
+          understand.
+        </p>
+
+        <h3>Outcome 3: Algorithms and Computer Science Practices</h3>
+        <p>
+          This outcome is supported through the relationship between the database records
+          and the Project Builder logic. The database stores structured service data,
+          including categories, features, recommendation tags, and weights. The builder
+          can then use that structured data to support filtering, grouping, and
+          recommendation logic.
+        </p>
+
+        <h3>Outcome 4: Software Engineering Tools and Techniques</h3>
+        <p>
+          This is the strongest outcome demonstrated by Enhancement Three. The enhancement
+          uses backend, database, API, and configuration practices to create a more
+          maintainable full-stack solution. The Project Builder is no longer limited to
+          static frontend content. Service and pricing data can be stored in a structured
+          backend database and retrieved through an API endpoint.
+        </p>
+
+        <h3>Outcome 5: Security Mindset</h3>
+        <p>
+          This outcome is strongly supported because the enhancement required decisions
+          about what data should and should not be stored. I intentionally avoided making
+          customer inquiry storage the focus of this enhancement. Instead, the database
+          stores non-sensitive service and pricing content. Real environment variables,
+          database connection strings, passwords, and secrets are not included in the
+          submitted files.
+        </p>
+      </section>
+
+      <section>
+        <h2>Reflection</h2>
+        <p>
+          While completing this enhancement, I learned about the importance of separating
+          data from the frontend interface. In the original version, pricing and service
+          information were more tightly connected to the page code. That approach can
+          work for a small static site, but it becomes harder to manage as the website
+          grows.
+        </p>
+
+        <p>
+          A challenge that I faced was managing the overlap between Enhancement Two and
+          Enhancement Three. Both enhancements involve the same Project Builder feature,
+          but they demonstrate different technical skills. Enhancement Two focuses on how
+          the builder processes user selections, organizes service options, and produces
+          recommendations. Enhancement Three focuses on how the service and pricing data
+          is stored, retrieved, and maintained through the database and backend API.
+        </p>
+
+        <p>
+          Another challenge was deciding what data should be stored. Since Lucid Grove
+          Studio is meant to avoid unnecessary data collection, I did not want the
+          database enhancement to depend on storing customer inquiries or sensitive user
+          information. Instead, I focused on database-backed service and pricing content.
+        </p>
+
+        <p>
+          I also learned the importance of safe configuration practices. A database-backed
+          application requires connection strings, environment variables, and deployment
+          configuration, but those values should not be exposed in a public repository or
+          milestone submission. To support safer development, the submitted files include
+          an example environment file rather than real secrets.
+        </p>
+
+        <p>
+          Overall, this enhancement improved the artifact by making the Project Builder
+          more scalable, maintainable, and production-ready. The database-backed structure
+          allows Lucid Grove Studio to manage pricing and service information more cleanly
+          while supporting the larger goal of building a professional, privacy-conscious
+          website.
+        </p>
+      </section>
+
+      <div class="button-row">
+        <a class="button-link" href="index.html">Back to Portfolio Home</a>
+        <a class="button-link" href="narratives/Enhancement-Three.docx">Download Word Version</a>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2026 Lucid Grove Studio. Created for academic review as part of the Computer Science capstone ePortfolio.</p>
+  </footer>
+</body>
+</html>
+```
