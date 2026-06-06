@@ -1,0 +1,370 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Professional Self-Assessment | Lucid Grove Studio Capstone</title>
+
+  <style>
+    :root {
+      --bg: #101512;
+      --panel: #151d18;
+      --panel-light: #1b261f;
+      --border: #334436;
+      --text: #f4f1e8;
+      --muted: #cfc8b8;
+      --gold: #d8b86a;
+      --green: #8fae8b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #17231b, #101512);
+      padding: 3rem 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header p {
+      max-width: 800px;
+      margin: 0.75rem auto 0;
+      color: var(--muted);
+    }
+
+    h1 {
+      color: var(--gold);
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      line-height: 1.2;
+    }
+
+    h2 {
+      color: var(--gold);
+      margin-top: 2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+    }
+
+    h3 {
+      color: var(--gold);
+      margin-bottom: 0.25rem;
+    }
+
+    a {
+      color: var(--gold);
+    }
+
+    main {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem;
+    }
+
+    article {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem;
+    }
+
+    .summary-card {
+      background: var(--panel-light);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+
+    .highlight {
+      background: #101512;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    .highlight strong {
+      color: var(--green);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .button-row {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .button-link {
+      color: #101512;
+      background: var(--gold);
+      padding: 0.6rem 0.9rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .button-link:hover {
+      background: #f0cf7a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Professional Self-Assessment</h1>
+    <p>
+      A reflection on my Computer Science capstone, my growth throughout the program,
+      and the professional skills demonstrated through the Lucid Grove Studio artifact.
+    </p>
+
+    <div class="button-row" style="justify-content: center;">
+      <a class="button-link" href="index.html">Back to Portfolio Home</a>
+      <a class="button-link" href="files/self-assessment/Professional-Self-Assessment-Paul-Joplin.docx">
+        Download Word Version
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <section class="summary-card">
+        <h2>Overview</h2>
+        <p>
+          My name is Paul Joplin, and this ePortfolio represents the final capstone
+          work completed for my Bachelor of Science in Computer Science program.
+          Throughout my time in the program, I have developed a stronger understanding
+          of software development, data structures, databases, security, communication,
+          and the process of turning technical ideas into working solutions.
+        </p>
+
+        <p>
+          This portfolio showcases those skills through the enhancement of a real-world
+          artifact: the Lucid Grove Studio website. The website began as a professional
+          business and portfolio website. For the capstone, I enhanced this single
+          artifact across the three required areas of software design and engineering,
+          algorithms and data structures, and databases.
+        </p>
+      </section>
+
+      <section>
+        <h2>Professional Direction</h2>
+        <p>
+          I selected the Lucid Grove Studio website because it reflects the kind of work
+          I want to continue doing professionally: building practical, user-centered
+          software and web applications that solve real problems for small businesses
+          and everyday users.
+        </p>
+
+        <p>
+          Completing my coursework and developing this ePortfolio helped me better
+          understand my strengths as a computer science student and future developer.
+          One of the most important strengths I developed is the ability to break larger
+          problems into smaller technical parts. A website is not only a visual product.
+          It includes structure, logic, data, security considerations, communication,
+          and user experience.
+        </p>
+      </section>
+
+      <section>
+        <h2>Key Skills Developed</h2>
+
+        <div class="highlight-grid">
+          <div class="highlight">
+            <strong>Software Design</strong>
+            Reusable React components, prop-driven structure, modular organization,
+            maintainability, and separation of concerns.
+          </div>
+
+          <div class="highlight">
+            <strong>Algorithmic Thinking</strong>
+            Structured decision logic, grouped recommendations, conditional paths,
+            and data-supported user guidance.
+          </div>
+
+          <div class="highlight">
+            <strong>Database Integration</strong>
+            Backend-supported service data, API retrieval, schema planning,
+            environment configuration, and safer data separation.
+          </div>
+        </div>
+
+        <p>
+          In Enhancement One, I refactored website-specific React components into
+          reusable front-end modules. This required me to think beyond whether the code
+          worked for one website and consider whether the components could be reused,
+          understood, and adapted later. I improved the components by using reusable
+          structure, prop-driven design, flexible styling support, reduced hardcoded
+          values, and documentation.
+        </p>
+
+        <p>
+          In Enhancement Two, I improved the Project Builder from a more static pricing
+          and service-selection flow into a structured decision-making system. The
+          enhanced builder uses organized data collections, conditional logic, grouped
+          outputs, and recommendation paths to help users understand which website
+          service option may fit their needs.
+        </p>
+
+        <p>
+          In Enhancement Three, I expanded the Project Builder by moving service and
+          pricing information into a database-backed structure. This allowed business
+          data such as packages, pricing ranges, service bundles, maintenance options,
+          and local visibility support to be stored outside of the frontend interface
+          and retrieved through a backend API endpoint.
+        </p>
+      </section>
+
+      <section>
+        <h2>Communication and Stakeholder Awareness</h2>
+        <p>
+          The Computer Science program also helped me develop stronger communication
+          skills. Technical work is only useful if it can be explained clearly to the
+          people who need to use, review, or maintain it. Through the capstone, I
+          created written narratives, a code review video, documentation, and this
+          ePortfolio to explain the purpose of the artifact and the reasoning behind
+          each enhancement.
+        </p>
+
+        <p>
+          Collaboration and stakeholder decision-making were also important parts of
+          my development. Even though this artifact is based on my own business website,
+          the project still required me to think from the perspective of future clients,
+          users, instructors, and potential developers. The Project Builder was designed
+          to help nontechnical users make better decisions about website services by
+          guiding them through options instead of overwhelming them with disconnected
+          information.
+        </p>
+
+        <p>
+          My experience working in retail has also shaped the way I think about clients
+          and software users. Retail has taught me that people are not just transactions
+          or numbers. Each person has different needs, frustrations, goals, budgets,
+          and levels of technical understanding. That experience helps me approach
+          client work with more patience and empathy.
+        </p>
+
+        <p>
+          For Lucid Grove Studio, I want each project to feel like a partnership rather
+          than a one-sided sale. A client should feel heard, respected, and guided
+          through the process instead of pressured into services they do not understand.
+          This perspective influenced the Project Builder because the goal was not only
+          to recommend services, but to make the decision process clearer and less
+          overwhelming for real people.
+        </p>
+      </section>
+
+      <section>
+        <h2>Security and Privacy Mindset</h2>
+        <p>
+          Security and privacy were major considerations throughout the enhancement
+          process. Since Lucid Grove Studio is intended to be privacy-conscious, I
+          avoided designing the database enhancement around unnecessary customer data
+          storage. Instead, the database stores non-sensitive service and pricing
+          information.
+        </p>
+
+        <p>
+          Real environment variables, database connection strings, passwords, and
+          secrets are not included in the submitted files. An example environment file
+          can show how the project is configured without exposing private credentials.
+          This reflects a security mindset because it considers not only how the software
+          works, but also what risks should be avoided.
+        </p>
+      </section>
+
+      <section>
+        <h2>Career Goals</h2>
+        <p>
+          My professional goals have become clearer throughout the program. I want to
+          continue developing practical software and web applications, especially tools
+          that help small businesses and individuals solve real problems without
+          unnecessary complexity.
+        </p>
+
+        <p>
+          My retail experience gives me a stronger appreciation for the human side of
+          that work because it has taught me to listen closely, explain clearly, and
+          treat each client as a partner in the project rather than just another sale.
+          I am interested in full-stack web development because it combines user
+          interface design, software structure, logic, data, and backend support.
+        </p>
+
+        <p>
+          The Lucid Grove Studio artifact reflects this goal because it is not only an
+          academic project; it is connected to the kind of work I want to keep building
+          after graduation.
+        </p>
+      </section>
+
+      <section>
+        <h2>How the Enhancements Fit Together</h2>
+        <p>
+          The three enhancements in this portfolio fit together as one complete
+          improvement to the same artifact. Enhancement One improved the structure and
+          reusability of the front-end components. Enhancement Two improved the logic
+          and decision-making process of the Project Builder. Enhancement Three improved
+          how the service and pricing data is stored, retrieved, and maintained.
+        </p>
+
+        <p>
+          Together, these enhancements show growth across multiple areas of computer
+          science while keeping the work connected to one realistic software product.
+          Overall, this capstone helped me demonstrate the full range of skills I
+          developed during the Computer Science program. I strengthened my ability to
+          design maintainable software, organize data, apply algorithmic thinking,
+          communicate technical decisions, and approach development with security and
+          privacy in mind.
+        </p>
+
+        <p>
+          The ePortfolio represents both my academic growth and my professional
+          direction as a developer. It shows that I can take an existing artifact,
+          evaluate its weaknesses, improve it through meaningful technical enhancements,
+          and explain those improvements professionally.
+        </p>
+      </section>
+
+      <div class="button-row">
+        <a class="button-link" href="index.html">Back to Portfolio Home</a>
+        <a class="button-link" href="files/narratives/Enhancement-1-Narrative-Paul-Joplin.docx">
+          View Enhancement Narratives
+        </a>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2026 Lucid Grove Studio. Created for academic review as part of the Computer Science capstone ePortfolio.</p>
+  </footer>
+</body>
+</html>
+```
