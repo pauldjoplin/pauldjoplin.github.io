@@ -1,0 +1,353 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Enhancement Two | Algorithms and Data Structures</title>
+
+  <style>
+    :root {
+      --bg: #101512;
+      --panel: #151d18;
+      --panel-light: #1b261f;
+      --border: #334436;
+      --text: #f4f1e8;
+      --muted: #cfc8b8;
+      --gold: #d8b86a;
+      --green: #8fae8b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #17231b, #101512);
+      padding: 3rem 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h1 {
+      color: var(--gold);
+      margin: 0 0 0.75rem;
+      font-size: clamp(2rem, 5vw, 3.1rem);
+      line-height: 1.2;
+    }
+
+    h2,
+    h3 {
+      color: var(--gold);
+    }
+
+    h2 {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+      margin-top: 2rem;
+    }
+
+    a {
+      color: var(--gold);
+    }
+
+    main {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem;
+    }
+
+    article {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem;
+    }
+
+    .summary-card {
+      background: var(--panel-light);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .button-link {
+      color: #101512;
+      background: var(--gold);
+      padding: 0.6rem 0.9rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .button-link:hover {
+      background: #f0cf7a;
+    }
+
+    .tag {
+      display: inline-block;
+      color: var(--bg);
+      background: var(--green);
+      padding: 0.2rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-right: 0.35rem;
+      margin-bottom: 0.35rem;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      background: #101512;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      color: var(--text);
+      overflow-x: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Enhancement Two</h1>
+    <p>Algorithms and Data Structures</p>
+
+    <div class="button-row" style="justify-content: center;">
+      <a class="button-link" href="index.html">Back to Portfolio Home</a>
+      <a class="button-link" href="narratives/Enhancement-Two.docx">Download Word Version</a>
+      <a class="button-link" href="enhanced-pages-redacted/enhanced-pages-redacted.zip">Download Enhanced Project Builder Files</a>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <section class="summary-card">
+        <h2>Overview</h2>
+        <p>
+          Enhancement Two focuses on the algorithms and data structures category of the capstone.
+          For this enhancement, I consolidated the original Pricing page and Project Starter into
+          a more structured Project Builder. The updated builder helps potential clients understand
+          what type of website package, support option, or add-on may best fit their needs.
+        </p>
+
+        <p>
+          The enhancement focuses on the logic behind the user flow, including how package options
+          are grouped, how selections affect later choices, and how the builder produces a useful
+          recommendation path for the user.
+        </p>
+
+        <p>
+          <span class="tag">Arrays</span>
+          <span class="tag">Objects</span>
+          <span class="tag">Conditional Logic</span>
+          <span class="tag">Recommendation Paths</span>
+        </p>
+      </section>
+
+      <section>
+        <h2>Justification and Improvement</h2>
+        <p>
+          The enhanced builder uses structured service and package data to represent website options,
+          featured bundles, maintenance choices, local visibility support, and other project-related
+          features. These structured objects allow the application to organize information more clearly
+          than if every choice were hardcoded into the interface.
+        </p>
+
+        <p>
+          This improvement showcases skills in algorithms and data structures because the system does
+          more than display static content. It processes data, evaluates conditions, organizes related
+          options, and produces user-facing output based on selected criteria.
+        </p>
+
+        <p>
+          This improvement made the builder easier to maintain and expand. Instead of relying on
+          repeated frontend code, the enhanced version separates service data from presentation logic
+          and uses decision logic to process that data.
+        </p>
+      </section>
+
+      <section>
+        <h2>Technical Implementation Details</h2>
+        <p>
+          The enhanced Project Builder uses structured data collections to organize the available
+          website packages, service bundles, maintenance options, local visibility support, and
+          recommendation paths. Instead of treating each option as separate hardcoded page content,
+          the builder organizes related options into arrays and objects that can be processed by
+          the application logic.
+        </p>
+
+        <p>
+          Service packages can be represented as objects with fields such as name, category,
+          description, features, priceRange, estimatedEffort, and recommendedFor. Groups of related
+          packages can then be stored in arrays. This allows the builder to loop through available
+          options, filter choices based on user selections, and display grouped recommendations without
+          repeating the same interface code for every possible result.
+        </p>
+
+        <pre>
+packages = [
+  {
+    name: "Seedling Website",
+    category: "static",
+    features: ["one-page website", "basic contact path", "mobile-friendly layout"],
+    recommendedFor: ["simple presence", "small business", "starter site"],
+    weight: 1
+  },
+  {
+    name: "Rooted Website",
+    category: "standard",
+    features: ["multi-section structure", "stronger service presentation", "contact support"],
+    recommendedFor: ["growing business", "service provider"],
+    weight: 2
+  }
+]
+        </pre>
+
+        <p>
+          The recommendation logic evaluates user selections and maps those selections to service
+          categories. For example, if a user selects that they need a simple online presence, the
+          builder can prioritize static or starter website options. If the user selects request forms,
+          booking needs, or interactive features, the builder can guide them toward more advanced
+          service paths.
+        </p>
+
+        <pre>
+Start Project Builder
+Ask user what type of help they need
+Store selection in builder state
+Compare selection against package categories and recommendation tags
+Increase score or priority for matching service paths
+Group matching results into recommended package, optional add-ons, and maintenance options
+Display a clear summary that nontechnical users can understand
+        </pre>
+
+        <p>
+          This approach improved efficiency because the user no longer has to move between separate
+          pricing and project-starter pages. The original flow required more steps and created a
+          disconnected experience. The enhanced flow reduced the process from roughly ten steps to
+          five by grouping related decisions together and showing choices that are relevant to the
+          selected path.
+        </p>
+
+        <p>
+          The main trade-off was balancing flexibility with simplicity. A fully detailed decision tree
+          could account for many more edge cases, but it would also become harder for users to complete
+          and harder for me to maintain. I chose grouped service paths, weighted recommendations, and
+          “Not Sure / Discuss” options so the builder could remain useful without becoming overwhelming
+          or too rigid.
+        </p>
+      </section>
+
+      <section>
+        <h2>Course Outcomes</h2>
+
+        <h3>Outcome 1: Collaborative Environments and Decision Making</h3>
+        <p>
+          This outcome is supported because the enhanced builder helps users make decisions. Many
+          small business owners do not know the technical difference between a static website, a
+          multi-page website, maintenance support, local visibility help, or interactive functionality.
+          The builder translates those technical options into a guided process that a nontechnical
+          audience can follow.
+        </p>
+
+        <h3>Outcome 2: Professional Communication</h3>
+        <p>
+          This outcome is supported through the way the builder communicates the results of the
+          algorithmic process. The recommendations must be understandable to potential clients, not
+          just technically correct. This required organizing the final output into clear package
+          guidance, optional add-ons, support choices, and “Not Sure / Discuss” options.
+        </p>
+
+        <h3>Outcome 3: Algorithms and Computer Science Practices</h3>
+        <p>
+          This is the strongest outcome demonstrated by Enhancement Two. The Project Builder uses
+          structured data, conditional logic, mapping, grouped outputs, and recommendation paths to
+          solve a real-world service-selection problem.
+        </p>
+
+        <h3>Outcome 4: Software Engineering Tools and Techniques</h3>
+        <p>
+          This outcome is supported because separating service data from presentation logic makes the
+          builder easier to maintain and expand. Package updates, support options, or recommendation
+          changes can be made with less repeated frontend work.
+        </p>
+
+        <h3>Outcome 5: Security Mindset</h3>
+        <p>
+          This outcome is supported through the privacy-conscious design of the feature. The Project
+          Builder can guide users and provide recommendations without requiring unnecessary customer
+          data storage. This reduces privacy risk while still allowing the feature to deliver value.
+        </p>
+      </section>
+
+      <section>
+        <h2>Reflection</h2>
+        <p>
+          While completing this enhancement, I learned that algorithmic improvements do not always
+          need to make a system more complicated from the user’s perspective. In this case, the better
+          solution was to make the user experience simpler while making the underlying logic more
+          organized.
+        </p>
+
+        <p>
+          The original pricing and project-starter experience required users to move through more
+          disconnected information. By consolidating the flow and using structured data, filtering,
+          grouping, and conditional recommendation logic, I reduced the number of major steps from
+          roughly ten to five. This made the builder easier for users to complete while also making
+          the code easier to maintain.
+        </p>
+
+        <p>
+          One challenge I faced was deciding how much logic belonged in the Project Builder. A pricing
+          and recommendation tool can easily become too complex if it tries to account for every
+          possible user situation. To address this, I used grouped service categories and weighted
+          recommendation paths instead of building an overly rigid decision tree.
+        </p>
+
+        <p>
+          Overall, this enhancement strengthened my understanding of how algorithms and data structures
+          apply to real software products. The Project Builder uses structured data and conditional
+          logic to support practical decision-making, and the improved design makes the website more
+          maintainable and professional.
+        </p>
+      </section>
+
+      <div class="button-row">
+        <a class="button-link" href="index.html">Back to Portfolio Home</a>
+        <a class="button-link" href="narratives/Enhancement-Two.docx">Download Word Version</a>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2026 Lucid Grove Studio. Created for academic review as part of the Computer Science capstone ePortfolio.</p>
+  </footer>
+</body>
+</html>
+```
