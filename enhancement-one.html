@@ -1,0 +1,305 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Enhancement One | Software Design and Engineering</title>
+
+  <style>
+    :root {
+      --bg: #101512;
+      --panel: #151d18;
+      --panel-light: #1b261f;
+      --border: #334436;
+      --text: #f4f1e8;
+      --muted: #cfc8b8;
+      --gold: #d8b86a;
+      --green: #8fae8b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #17231b, #101512);
+      padding: 3rem 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h1 {
+      color: var(--gold);
+      margin: 0 0 0.75rem;
+      font-size: clamp(2rem, 5vw, 3.1rem);
+      line-height: 1.2;
+    }
+
+    h2,
+    h3 {
+      color: var(--gold);
+    }
+
+    h2 {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+      margin-top: 2rem;
+    }
+
+    a {
+      color: var(--gold);
+    }
+
+    main {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem;
+    }
+
+    article {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem;
+    }
+
+    .summary-card {
+      background: var(--panel-light);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .button-link {
+      color: #101512;
+      background: var(--gold);
+      padding: 0.6rem 0.9rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .button-link:hover {
+      background: #f0cf7a;
+    }
+
+    .tag {
+      display: inline-block;
+      color: var(--bg);
+      background: var(--green);
+      padding: 0.2rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-right: 0.35rem;
+      margin-bottom: 0.35rem;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      background: #101512;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      color: var(--text);
+      overflow-x: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Enhancement One</h1>
+    <p>Software Design and Engineering</p>
+
+    <div class="button-row" style="justify-content: center;">
+      <a class="button-link" href="index.html">Back to Portfolio Home</a>
+      <a class="button-link" href="narratives/Enhancement-One.docx">Download Word Version</a>
+      <a class="button-link" href="supporting/reusable-component-lib.zip">Download Reusable Component Library</a>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <section class="summary-card">
+        <h2>Overview</h2>
+        <p>
+          Enhancement One focuses on the software design and engineering category of the capstone.
+          The artifact is the Lucid Grove Studio website component set, including reusable interface
+          files such as backtotop.jsx, header.jsx, footer.jsx, NavDrawer.jsx, scrolltotop.jsx, and
+          sectionstyle.jsx.
+        </p>
+        <p>
+          The original components were created for my business website. The enhancement converted
+          website-specific components into reusable front-end modules that could be adapted for
+          future projects or client builds.
+        </p>
+        <p>
+          <span class="tag">React</span>
+          <span class="tag">Reusable Components</span>
+          <span class="tag">Prop-Driven Design</span>
+          <span class="tag">Maintainability</span>
+        </p>
+      </section>
+
+      <section>
+        <h2>Justification and Improvement</h2>
+        <p>
+          I selected my own website to enhance because it showcases real front-end development work,
+          including React component design, UI structure, navigation behavior, layout organization,
+          reusable patterns, and maintainability. The improvement was not simply copying files into
+          another folder. The improvement was taking original components that were tied to one branded
+          website, stripping away site-specific styling, and packaging them for reuse.
+        </p>
+
+        <p>
+          The enhanced versions were converted into reusable, prop-driven components with generic
+          naming, flexible className support, fewer hardcoded values, and documentation for future
+          import or reuse. This makes the components more adaptable and easier to maintain across
+          future projects.
+        </p>
+      </section>
+
+      <section>
+        <h2>Technical Implementation Details</h2>
+        <p>
+          The enhanced component set was designed around reusable React patterns. The original
+          components were useful for the Lucid Grove Studio website, but many of them were connected
+          to specific styling, branding, or page behavior. During the enhancement, I created reusable
+          versions that could accept values through props instead of relying on hardcoded content.
+        </p>
+
+        <p>
+          Reusable components can accept props such as children, className, title, links, visibility
+          options, or configuration values depending on the purpose of the component. The className
+          prop allows a future project to apply its own styling without changing the component’s
+          internal structure. This improves separation of concerns because the component can control
+          structure and behavior while the parent project controls appearance.
+        </p>
+
+        <pre>
+Receive component props from the parent project
+Apply default values when optional props are not provided
+Merge custom className values with the component’s base structure
+Render the interface structure using the provided content or children
+Allow the parent project to handle styling, routing, or layout decisions
+        </pre>
+
+        <p>
+          State management was kept minimal because these components are primarily structural and
+          interface-focused. Where behavior was needed, such as navigation visibility or scroll-related
+          interaction, the component was designed to keep that behavior isolated instead of spreading
+          it across unrelated page files.
+        </p>
+
+        <p>
+          The reusable files were packaged separately from the live website so that the enhanced
+          component library could be reviewed without disrupting the production site. This also
+          created a clear before-and-after comparison between the original Lucid Grove Studio
+          components and the enhanced reusable versions.
+        </p>
+      </section>
+
+      <section>
+        <h2>Course Outcomes</h2>
+
+        <h3>Outcome 2: Professional Communication</h3>
+        <p>
+          This outcome is supported through the documentation created for the reusable component
+          library. The documentation explains the purpose of each component, how it can be imported,
+          what props it accepts, and how another developer could apply styling or behavior in a future
+          project.
+        </p>
+
+        <h3>Outcome 3: Algorithms and Computer Science Practices</h3>
+        <p>
+          Although this enhancement is mainly focused on software design and engineering, it also
+          supports Outcome 3 through predictable rendering and reuse. Each component follows a clear
+          rendering flow: receive props, apply optional class names or configuration values, render
+          the correct interface structure, and allow the parent project to control styling or content.
+        </p>
+
+        <h3>Outcome 4: Software Engineering Tools and Techniques</h3>
+        <p>
+          This is the strongest outcome demonstrated by Enhancement One. The refactoring process
+          demonstrates modular design, separation of concerns, prop-driven React architecture,
+          reusable interface patterns, and maintainable front-end organization.
+        </p>
+
+        <h3>Outcome 5: Security Mindset</h3>
+        <p>
+          This enhancement supports a security mindset by keeping the reusable components generic
+          and avoiding unnecessary user data handling. The components do not store sensitive
+          information, expose customer data, or depend on private business logic.
+        </p>
+      </section>
+
+      <section>
+        <h2>Reflection</h2>
+        <p>
+          During this enhancement, I learned how to create reusable components in React. I quickly
+          learned that it was not just a matter of copying code from one folder to the next. The
+          original components worked well for my own website, but they were so closely tied to that
+          project that I had to consider stripping what made them unique to my project.
+        </p>
+
+        <p>
+          One of the main challenges was deciding how generic the components should become. I wanted
+          to remove the styling without removing the functionality and structure. I had to find the
+          balance between original functionality and making each component flexible enough to adapt
+          to future builds.
+        </p>
+
+        <p>
+          I validated the reusable components by importing them one at a time into a controlled
+          section of the project and checking that each component rendered correctly, accepted props
+          as expected, and allowed styling to be applied without depending on Lucid Grove Studio’s
+          original branding.
+        </p>
+
+        <p>
+          Overall, this process strengthened my understanding of front-end software design. I learned
+          that maintainable code is not only code that works, but code that can be adapted, reused,
+          and understood later.
+        </p>
+      </section>
+
+      <div class="button-row">
+        <a class="button-link" href="index.html">Back to Portfolio Home</a>
+        <a class="button-link" href="narratives/Enhancement-One.docx">Download Word Version</a>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2026 Lucid Grove Studio. Created for academic review as part of the Computer Science capstone ePortfolio.</p>
+  </footer>
+</body>
+</html>
+```
