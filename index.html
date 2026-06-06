@@ -1,69 +1,159 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Lucid Grove Studio Capstone ePortfolio</title>
 
   <style>
+    :root {
+      --bg: #101512;
+      --panel: #151d18;
+      --panel-light: #1b261f;
+      --border: #334436;
+      --text: #f4f1e8;
+      --muted: #cfc8b8;
+      --gold: #d8b86a;
+      --green: #8fae8b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #101512;
-      color: #f4f1e8;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
 
     header {
-      background: #17231b;
+      background: linear-gradient(135deg, #17231b, #101512);
       padding: 3rem 1.5rem;
       text-align: center;
-      border-bottom: 1px solid #334436;
+      border-bottom: 1px solid var(--border);
     }
 
     h1 {
-      color: #d8b86a;
-      margin-bottom: 0.5rem;
+      color: var(--gold);
+      margin: 0 0 0.75rem;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      line-height: 1.2;
     }
 
-    h2, h3 {
-      color: #d8b86a;
+    h2,
+    h3 {
+      color: var(--gold);
+    }
+
+    h2 {
+      margin-top: 0;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+    }
+
+    h3 {
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      margin-top: 0.5rem;
+    }
+
+    a {
+      color: var(--gold);
     }
 
     nav {
       margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
     }
 
-    nav a {
-      color: #d8b86a;
-      margin: 0 0.6rem;
+    nav a,
+    .button-link {
+      color: #101512;
+      background: var(--gold);
+      padding: 0.55rem 0.85rem;
+      border-radius: 999px;
       text-decoration: none;
       font-weight: bold;
+      display: inline-block;
+    }
+
+    nav a:hover,
+    .button-link:hover {
+      background: #f0cf7a;
     }
 
     main {
-      max-width: 900px;
+      max-width: 1050px;
       margin: 0 auto;
       padding: 2rem 1.25rem;
     }
 
     section {
-      background: #151d18;
-      border: 1px solid #334436;
+      background: var(--panel);
+      border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 1.4rem;
+      padding: 1.5rem;
       margin-bottom: 1.4rem;
     }
 
-    ul {
-      padding-left: 1.4rem;
+    .intro {
+      background: var(--panel-light);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: #101512;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .file-list a {
+      display: block;
+      margin-bottom: 0.45rem;
+    }
+
+    .tag {
+      display: inline-block;
+      color: var(--bg);
+      background: var(--green);
+      padding: 0.2rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-right: 0.35rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 0.95rem;
     }
 
     footer {
       text-align: center;
       padding: 1.5rem;
-      color: #cfc8b8;
-      border-top: 1px solid #334436;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
     }
   </style>
 </head>
@@ -72,87 +162,323 @@
   <header>
     <h1>Lucid Grove Studio Capstone ePortfolio</h1>
     <p>
-      Senior capstone ePortfolio focused on enhancing an existing professional website
-      through software design, algorithmic logic, and database integration.
+      A senior Computer Science capstone portfolio demonstrating software design,
+      algorithmic decision-making, database integration, professional communication,
+      and privacy-conscious web development.
     </p>
 
     <nav>
-      <a href="#overview">Overview</a>
+      <a href="#self-assessment">Self-Assessment</a>
+      <a href="#code-review">Code Review</a>
       <a href="#artifact">Artifact</a>
       <a href="#enhancements">Enhancements</a>
-      <a href="#skills">Career Focus</a>
-      <a href="#future">Future Materials</a>
+      <a href="#outcomes">Outcomes</a>
+      <a href="#materials">Materials</a>
     </nav>
   </header>
 
   <main>
-    <section id="overview">
-      <h2>Project Overview</h2>
+    <section id="self-assessment" class="intro">
+      <h2>Professional Self-Assessment</h2>
       <p>
-        This ePortfolio will document my senior capstone project for the Computer Science program.
-        The project focuses on improving an existing real-world website into a more modular,
-        interactive, and data-driven web application.
+        The professional self-assessment serves as the formal introduction to this
+        portfolio. It reflects on my growth throughout the Computer Science program,
+        my career goals, and how the Lucid Grove Studio enhancements demonstrate my
+        technical and professional skills.
       </p>
+
+      <p>
+        <a class="button-link" href="self-assessment.html">
+          View Professional Self-Assessment
+        </a>
+      </p>
+    </section>
+
+    <section id="code-review">
+      <h2>Informal Code Review</h2>
+      <p>
+        The informal code review is divided into three short videos. Together, these
+        videos document the original state of the artifact, explain existing functionality,
+        identify opportunities for improvement, and introduce the planned enhancements
+        across software design, algorithms and data structures, and databases.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Video 1: Old Pricing Page</h3>
+          <p>
+            Reviews the original pricing page and explains opportunities to improve
+            pricing structure, maintainability, and future data organization.
+          </p>
+          <a class="button-link" href="https://youtu.be/DZm6P6sBkrM" target="_blank" rel="noopener">
+            View Video 1
+          </a>
+        </div>
+
+        <div class="card">
+          <h3>Video 2: Old Project Starter</h3>
+          <p>
+            Reviews the original project starter flow and explains opportunities for
+            improved decision logic, guided recommendations, and user experience.
+          </p>
+          <a class="button-link" href="https://youtu.be/fSsj0ghnD10" target="_blank" rel="noopener">
+            View Video 2
+          </a>
+        </div>
+
+        <div class="card">
+          <h3>Video 3: Component Opportunities</h3>
+          <p>
+            Reviews reusable component opportunities and explains how the artifact
+            could be improved through modular front-end structure.
+          </p>
+          <a class="button-link" href="https://youtu.be/vmnR8i7aXIM" target="_blank" rel="noopener">
+            View Video 3
+          </a>
+        </div>
+      </div>
     </section>
 
     <section id="artifact">
       <h2>Selected Artifact</h2>
       <p>
-        My selected artifact is the existing Lucid Grove Studio website. The current site functions
-        as a professional business and portfolio website. For the capstone, I will enhance this
-        single artifact across the three required computer science categories.
+        The selected artifact is the Lucid Grove Studio website. It began as a
+        professional business and portfolio website and was enhanced into a more
+        modular, interactive, and data-supported web application.
       </p>
+
+      <p>
+        I selected this artifact because it represents real front-end development,
+        service-selection logic, database integration, professional communication,
+        and privacy-conscious design decisions.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Original Artifact</h3>
+          <p>
+            The original artifact files show the relevant website pages before the
+            capstone enhancements were completed. These files have been redacted before
+            upload to remove private configuration or sensitive project details.
+          </p>
+          <a href="original-pages-redacted/">
+            View Original Pages Folder
+          </a>
+        </div>
+
+        <div class="card">
+          <h3>Enhanced Artifact</h3>
+          <p>
+            The enhanced artifact files show the updated pages after the capstone
+            enhancements, including the improved Project Builder and related page
+            structure. These files have also been redacted for safe academic review.
+          </p>
+          <a href="enhanced-pages-redacted/">
+            View Enhanced Pages Folder
+          </a>
+        </div>
+      </div>
     </section>
 
     <section id="enhancements">
-      <h2>Planned Enhancements</h2>
+      <h2>Completed Enhancements</h2>
 
-      <h3>Software Design and Engineering</h3>
-      <p>
-        Refactor the website into reusable React components to improve maintainability,
-        reduce repeated code, and create a stronger internal structure.
-      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Enhancement One: Software Design and Engineering</h3>
+          <p>
+            Enhancement One refactored website-specific React components into reusable
+            front-end modules. This included generic naming, prop-driven structure,
+            flexible styling support, reduced hardcoded values, and documentation for
+            future reuse.
+          </p>
+          <p>
+            <span class="tag">React</span>
+            <span class="tag">Reusable Components</span>
+            <span class="tag">Modularity</span>
+            <span class="tag">Maintainability</span>
+          </p>
+          <a href="narratives/Enhancement-1-Narrative-Paul-Joplin.docx">
+            Download Enhancement One Narrative
+          </a>
+        </div>
 
-      <h3>Algorithms and Data Structures</h3>
-      <p>
-        Enhance the project starter and pricing flow into an interactive recommendation and
-        example estimate system using structured data, scoring logic, filtering, and conditional rules.
-      </p>
+        <div class="card">
+          <h3>Enhancement Two: Algorithms and Data Structures</h3>
+          <p>
+            Enhancement Two improved the Project Builder from a static pricing and
+            service-selection flow into a structured decision-making system using
+            organized data, conditional paths, grouped outputs, and recommendation logic.
+          </p>
+          <p>
+            <span class="tag">Arrays</span>
+            <span class="tag">Objects</span>
+            <span class="tag">Decision Logic</span>
+            <span class="tag">Recommendations</span>
+          </p>
+          <a href="narratives/Enhancement-2-Narrative-Paul-Joplin.docx">
+            Download Enhancement Two Narrative
+          </a>
+        </div>
 
-      <h3>Databases</h3>
-      <p>
-        Add a database-backed service and pricing catalog that stores non-sensitive business data,
-        such as services, add-ons, pricing ranges, and estimated effort values.
-      </p>
+        <div class="card">
+          <h3>Enhancement Three: Databases</h3>
+          <p>
+            Enhancement Three added database-backed pricing and service data for the
+            Project Builder. Service packages, bundles, maintenance options, and local
+            visibility support can be stored outside the frontend and retrieved through
+            backend API logic.
+          </p>
+          <p>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Backend API</span>
+            <span class="tag">Service Data</span>
+            <span class="tag">Privacy</span>
+          </p>
+          <a href="narratives/Enhancement-3-Narrative-Paul-Joplin.docx">
+            Download Enhancement Three Narrative
+          </a>
+        </div>
+      </div>
     </section>
 
-    <section id="skills">
-      <h2>Skill Set and Career Focus</h2>
+    <section id="outcomes">
+      <h2>Course Outcome Alignment</h2>
       <p>
-        This ePortfolio will demonstrate my skills in web development, software engineering,
-        database integration, algorithmic problem-solving, professional communication, and
-        privacy-conscious design.
+        The completed artifact enhancements collectively demonstrate the five Computer
+        Science capstone outcomes. Each enhancement contributes to more than one outcome,
+        and together they show growth across technical implementation, communication,
+        decision-making, and security.
       </p>
-      <p>
-        My career focus is software and web development, especially building practical,
-        user-centered applications for small businesses.
-      </p>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Outcome 1: Collaborative Environments and Decision Making</h3>
+          <p>
+            The Project Builder supports decision-making for nontechnical users by
+            guiding them through service options, support paths, and project needs in
+            an organized and understandable way.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Outcome 2: Professional Communication</h3>
+          <p>
+            The narratives, documentation, code review videos, and ePortfolio presentation
+            communicate technical work to both technical and nontechnical audiences.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Outcome 3: Algorithms and Computer Science Practices</h3>
+          <p>
+            The enhanced Project Builder uses structured data, mapping, conditional
+            logic, grouped recommendations, and design trade-off management to solve
+            a real service-selection problem.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Outcome 4: Software Engineering Tools and Techniques</h3>
+          <p>
+            The reusable React components, backend-supported service data, API integration,
+            and maintainable project organization demonstrate industry-relevant
+            development practices.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Outcome 5: Security Mindset</h3>
+          <p>
+            The enhanced artifact avoids unnecessary customer data storage, separates
+            backend configuration from public code, uses example configuration files
+            instead of real secrets, and supports privacy-conscious design.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section id="future">
-      <h2>Future Portfolio Materials</h2>
-      <ul>
-        <li>Code review video</li>
-        <li>Original artifact documentation</li>
-        <li>Enhanced artifact documentation</li>
-        <li>Milestone narratives</li>
-        <li>Professional self-assessment</li>
-      </ul>
+    <section id="materials">
+      <h2>Portfolio Materials</h2>
+      <p>
+        The following materials are included for academic review. The uploaded folders
+        contain redacted files where needed to avoid exposing credentials, private
+        configuration values, or sensitive deployment information.
+      </p>
+
+      <div class="grid">
+        <div class="card file-list">
+          <h3>Written Materials</h3>
+          <a href="self-assessment.html">
+            Professional Self-Assessment
+          </a>
+          <a href="narratives/Enhancement-1-Narrative-Paul-Joplin.docx">
+            Enhancement One Narrative
+          </a>
+          <a href="narratives/Enhancement-2-Narrative-Paul-Joplin.docx">
+            Enhancement Two Narrative
+          </a>
+          <a href="narratives/Enhancement-3-Narrative-Paul-Joplin.docx">
+            Enhancement Three Narrative
+          </a>
+        </div>
+
+        <div class="card file-list">
+          <h3>Code Review Videos</h3>
+          <a href="https://youtu.be/DZm6P6sBkrM" target="_blank" rel="noopener">
+            Video 1: Old Pricing Page
+          </a>
+          <a href="https://youtu.be/fSsj0ghnD10" target="_blank" rel="noopener">
+            Video 2: Old Project Starter
+          </a>
+          <a href="https://youtu.be/vmnR8i7aXIM" target="_blank" rel="noopener">
+            Video 3: Component Opportunities
+          </a>
+          <a href="code-reviews/">
+            View Code Review Folder
+          </a>
+        </div>
+
+        <div class="card file-list">
+          <h3>Artifact Files</h3>
+          <a href="original-pages-redacted/">
+            Original Pages - Redacted
+          </a>
+          <a href="enhanced-pages-redacted/">
+            Enhanced Pages - Redacted
+          </a>
+          <a href="supporting/reusable-component-lib/">
+            Reusable Component Library
+          </a>
+          <a href="supporting/backend-v2/">
+            Backend V2 and Database Support
+          </a>
+        </div>
+
+        <div class="card file-list">
+          <h3>Repository Materials</h3>
+          <a href="README.md">
+            Repository README
+          </a>
+          <a href=".gitignore">
+            Git Ignore File
+          </a>
+        </div>
+      </div>
+
+      <p class="note">
+        Note: Some submitted files are redacted for safe public review. Real secrets,
+        passwords, database connection strings, environment variables, and private
+        deployment values are not included in this repository.
+      </p>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 Lucid Grove Studio. Public for academic review only.</p>
+    <p>
+      © 2026 Lucid Grove Studio. Created for academic review as part of the Computer Science capstone ePortfolio.
+    </p>
   </footer>
 </body>
 </html>
+```
