@@ -1,4 +1,4 @@
-# # pauldjoplin.github.io
+## pauldjoplin.github.io
 ePortfolio for CS-499 Capstone
 # Lucid Grove Studio Capstone ePortfolio
 
