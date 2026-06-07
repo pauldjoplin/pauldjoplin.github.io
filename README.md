@@ -54,8 +54,6 @@ Sensitive information such as environment variables, API keys, private deploymen
 
 ## Repository Contents
 
-This repository may include:
-
 - Capstone ePortfolio homepage
 - Enhancement plan
 - Pseudocode or flowcharts
@@ -77,10 +75,6 @@ This capstone project is designed to demonstrate the following skills:
 - Database design and integration
 - Privacy-conscious and secure development decisions
 - Use of industry-relevant tools and workflows
-
-## Code Review Video
-
-A code review video will be added later in the course. The video will walk through the original version of the website, identify areas for improvement, and explain the planned enhancements.
 
 ## ePortfolio Website
 
